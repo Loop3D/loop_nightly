@@ -1,0 +1,54 @@
+{% set name = "map2loop" %}
+{% set version = "1.0.9" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  git_url: https://github.com/Loop3D/map2loop-2
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install ."
+
+requirements:
+  host:
+    - pip
+    - python
+    - pybind11
+    - setuptools
+  run:
+    - numpy
+    - pandas
+    - geopandas
+    - pyproj=2.6.0
+    - shapely
+    - rasterio
+    - descartes
+    - matplotlib
+    - networkx
+    - scipy
+    - owslib
+    - tqdm
+    - map2model
+    - mplstereonet
+    - hjson
+    - loopprojectfile
+
+test:
+  imports:
+    - map2loop
+
+about:
+  home: "https://github.com/Loop3D/map2loop-2"
+  license: MIT
+  license_family: MIT
+  license_file: 
+  summary: "Generate 3D model data using 2D maps."
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - yohanderose
