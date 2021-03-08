@@ -1,7 +1,6 @@
 name: Publish Docker Hub
 on:
-  release:
-    types: [created]
+  push
 
 jobs:
   build:
