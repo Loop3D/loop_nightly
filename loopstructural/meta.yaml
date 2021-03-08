@@ -1,9 +1,9 @@
-{% set name = "loopstructural" %}
-{% set version = "1.0.5" %}
+{% set name = "loopstructural-nightly" %}
+#{% set version = $ls_version%}
 
 package:
   name: "{{ name|lower }}"
-  version: "{{ version }}"
+  version: "{{ ls_version }}"
 
 source:
   git_url: https://github.com/Loop3D/LoopStructural
