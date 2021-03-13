@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  structural:
+    build: ./
+    volumes:
+      - /home/lgrose/lachlan.grose@monash.edu/LoopStructural/:/home/jovyan/notebooks
+
+    ports:
+      - 8888:8888
+    
